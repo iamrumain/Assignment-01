@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page Design</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Services</a></li>
+            <div class="nav-button">
+                <a href="#" class="ctm-reg">Register Now</a>
+            </div>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-left">
+            <h1>Blockchain Technology</h1>
+            <p>The idea of cryptocurrency has been around for decades, but the introduction of Bitcoin completely changed the cryptocurrency landscape. <br>If you haven’t explored cryptocurrencies, now is the time to understand their value and impact in the digital era.</p>
+            <div class="banner-btm">
+                <a href="#register" class="cta-btm">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="banner-right">
+            <img src="src/banner/banner.png" alt="Blockchain Banner" class="banner-src">
+        </div>
+    </section>
+
+    <!-- Our Clients Section -->
+    <section class="clients-section">
+        <div class="clients-title">
+            <h1>Our Clients</h1>
+            <p>We have been working with some Fortune 500+ clients</p>
+        </div>
+
+        <div class="clients-logo">
+            <div class="client-logo"><img src="src/logo/logo1.svg" alt="Logo 1"></div>
+            <div class="client-logo"><img src="src/logo/logo2.svg" alt="Logo 2"></div>
+            <div class="client-logo"><img src="src/logo/logo3.svg" alt="Logo 3"></div>
+            <div class="client-logo"><img src="src/logo/logo4.svg" alt="Logo 4"></div>
+            <div class="client-logo"><img src="src/logo/logo5.svg" alt="Logo 5"></div>
+            <div class="client-logo"><img src="src/logo/logo6.svg" alt="Logo 6"></div>
+        </div>
+    </section>
+
+
+    <!-- Helping Blockchain Section -->
+    <section class="achievements-section">
+        <div class="achievements-left">
+            <h1>Helping Blockchain </br> Transform the World</h1>
+            <p>We reached here with innovation and decentralization</p>
+        </div>
+        <div class="achievements-right">
+            <div class="count-card">
+                <img src="src/logo/user-group-svgrepo-com.svg" alt="icon">
+                <div class="count-content">
+                    <h1 >120+</h1>
+                    <p>Blockchain Networks</p>
+                </div>
+            </div>
+            <div class="count-card">
+                <img src="src/logo/chain.svg" alt="icon">
+                <div class="count-content">
+                    <h1 >420,000+</h1>
+                    <p>Smart Contracts</p>
+                </div>
+            </div>
+            <div class="count-card">
+                <img src="src/logo/lock-keyhole-unlocked-svgrepo-com.svg" alt="icon">
+                <div class="count-content">
+                    <h1 >$150 Billion+</h1>
+                    <p >Total Value Locked</p>
+                </div>
+            </div>
+            <div class="count-card">
+                <img src="src/logo/bitcoin-circle-svgrepo-com.svg" alt="icon">
+                <div class="count-content">
+                    <h1 >1,245,000+</h1>
+                    <p >Active Wallets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blockchain Future Section -->
+    <section class="blockchain-futuer-container">
+        <div class="header-text">
+          <h1>Blockchain: The Foundation of Future</h1>
+          <p >Discover the latest blockchain trends, innovations, and use cases. Learn how <br>  blockchain is reshaping industries, securing data, and powering the next <br> generation of applications.</p>
+        </div>
+  
+        <div class="blockchain-futuer-details">
+              <div class="card-details">
+                <img
+                  class="card-image"
+                  src="src/photos/server-room-artificial-intelligence-big-data-processing-online-banking-operations_39422-813.jpg"
+                  alt="blockchain future image"/>
+                <div class="image-text">
+                  <p >Transforming banking with secure and decentralized solutions.</p>
+                  <a href="#" class="read-more">Read More -></a>
+                </div>
+              </div>
+              <div class="card-details">
+                <img
+                  class="card-image"
+                  src="src/photos/global-connections.jpg"
+                  alt="blockchain future image"/>
+                <div class="image-text">
+                  <p >Ensuring transparency and traceability worldwide</p>
+                  <a href="#" class="read-more">Read More -></a>
+                </div>
+              </div>
+              <div class="card-details">
+                <img
+                  class="card-image"
+                  src="src/photos/5371219.jpg"
+                  alt="blockchain future image"/>
+                <div class="image-text">
+                  <p >Expanding blockchain with NFTs, Dapps, and Web3.</p>
+                  <a href="#" class="read-more">Read More -></a>
+                </div>
+              </div>
+        </div> 
+    </section> 
+    
+    <!-- Contact Us Section -->
+    <section class="contact-section">
+        <div class="contact-left">
+            <img src="src/photos/server-room-artificial-intelligence-big-data-processing-online-banking-operations_39422-813.jpg" alt="Contact Us Image">
+        </div>
+        <div class="contact-right">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Logo and Description -->
+        <div class="footer-logo">
+            <h2>Logo</h2>
+            <p>Copyright © 2020 Landify UI Kit.</p>
+            <p>All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+
+        <!-- Company Links -->
+        <div class="footer-company">
+            <h4>Company</h4>
+            <a href="#">About us</a>
+            <a href="#">Blog</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact us</a>
+            <a href="#">Testimonials</a>
+        </div>
+
+        <!-- Support Links -->
+        <div class="footer-support">
+            <h4>Support</h4>
+            <a href="#">FAQs</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Legal</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Status</a>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-msg">
+            <h4>Stay Up to Date</h4>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </footer>
+</body>
+</html>
