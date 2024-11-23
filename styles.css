@@ -379,14 +379,14 @@ body {
 }
 
 .member-right .card-icon {
-    width: 60px;
-    height: 60px;
+
     border-radius: 50%;
     margin-bottom: 10px;
     background-color: #f0f4f8;
     padding: 10px;
 }
-.member-right  .card-logo {
+.member-right .card-logo {
+    overflow: hidden;
     width: 60px;
     height: 60px;
     border-radius: 50%;
