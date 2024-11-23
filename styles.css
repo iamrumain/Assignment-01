@@ -386,12 +386,20 @@ body {
     padding: 10px;
 }
 .member-right .card-logo {
-    overflow: hidden;
     width: 60px;
     height: 60px;
+    background-color: #f0f4f8;
     border-radius: 50%;
     margin-bottom: 10px;
+    overflow: hidden; 
 }
+
+.member-right .card-logo img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
 .card-title {
     font-size: 20px;
     font-weight: 600;
