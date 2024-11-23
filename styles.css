@@ -23,7 +23,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     
 }
-
 .navbar .logo a {
     color: #0B0B0B;
     font-size: 24px;
@@ -35,6 +34,7 @@ body {
     display: flex;
     gap: 1rem;
     list-style: none;
+    transition: max-height 0.3s ease-in-out;
 }
 
 .nav-links li a {
@@ -48,7 +48,7 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #0B0B0B;
+    color: #fff;
     background-color: #007bff;
 }
 
@@ -66,17 +66,61 @@ body {
     background-color: #0056b3;
 }
 
-
-.menubar {
-    display: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: #0B0B0B
-}
 .hamburger {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: #0B0B0B;
+}
+
+/* Nav bar Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo a {
+        font-size: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
 
 
@@ -102,8 +146,8 @@ body {
 }
 
 .banner-left h1 {
-    font-size: 48px;
-    color: #333;
+    font-size: 35px;
+    color:  #4D4D4D;
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -119,7 +163,7 @@ body {
     text-decoration: none;
     padding: 14px 28px;
     background-color: #0471f6;
-    color: #ffff;
+    color: #fff;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
@@ -133,9 +177,9 @@ body {
 }
 
 .banner-right {
-
     text-align: center;
     padding: 20px;
+    flex: 1;
 }
 
 .banner-right img {
@@ -143,6 +187,51 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .banner-left h1 {
+        font-size: 35px;
+    }
+
+    .banner-left p {
+        font-size: 16px;
+    }
+
+    .banner-left .banner-btm .cta-btm {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .banner-right img {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-left h1 {
+        font-size: 28px;
+    }
+
+    .banner-left p {
+        font-size: 14px;
+    }
+
+    .banner-left .banner-btm .cta-btm {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .banner-right img {
+        width: 100%;
+        margin: 20px auto;
+    }
 }
 
 
@@ -158,7 +247,7 @@ body {
 .clients-title h1 {
     font-size: 36px;
     font-weight: 700;
-    color: #333;
+    color: #4D4D4D;
     margin-bottom: 10px;
 }
 
@@ -194,6 +283,188 @@ body {
 .client-logo img {
     max-width: 100%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    
+    .clients-title h1 {
+        
+        font-size: 28px;
+    }
+
+    .clients-title p {
+        font-size: 14px;
+    }
+
+    .clients-logo {
+        gap: 20px;
+    }
+
+    .client-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-title h1 {
+        font-size: 24px;
+    }
+
+    .clients-title p {
+        font-size: 12px;
+    }
+
+    .client-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+/* Power of Blockchain section */
+.power-section {
+    background-color: #ffffff;
+    justify-content: center;
+    padding: 120px 90px;
+}
+
+.member-left h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color:  #4D4D4D;
+}
+
+.member-left p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    color: #717171;
+
+}
+
+.member-right {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 30px;
+ 
+}
+
+.member-right .id-card {
+    width: 280px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-right .id-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member-right .card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.member-right .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: #f0f4f8;
+    padding: 10px;
+}
+.member-right  .card-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color:  #4D4D4D;
+    margin-top: 10px;
+}
+
+.member-right .card-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .member-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .member-title h1 {
+        font-size: 26px;
+    }
+
+    .member-title p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .member-title h1 {
+        font-size: 24px;
+    }
+
+    .member-title p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .id-card {
+        padding: 20px 15px;
+    }
+
+    .card-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .member-title h1 {
+        font-size: 22px;
+    }
+
+    .member-title p {
+        font-size: 13px;
+    }
+
+    .id-card {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
 }
 
 
@@ -269,177 +540,165 @@ body {
     font-weight: 400;
     color: #717171;
 }
+/* Helping Blockchain Responsiveness  */
+@media (max-width: 768px) {
+    .achievements-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
 
+    .achievements-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-
-/* Power of Blockchain section */
-.power-section {
-    background-color: #ffffff;
-    justify-content: center;
-    padding: 120px 90px;
+    .achievements-right {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
 }
 
-.member-left h1 {
-    font-size: 32px;
-    font-weight: 700;
-    text-align: center;
-    color: #333;
+@media (max-width: 480px) {
+    .achievements-left h1 {
+        font-size: 24px;
+    }
+
+    .achievements-left p {
+        font-size: 16px;
+    }
+
+    .count-content h1 {
+        font-size: 24px;
+    }
+
+    .count-content p {
+        font-size: 14px;
+    }
+
+    .count-card img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-.member-left p {
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 1.5;
-    color: #717171;
-
-}
-
-.member-right {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-    /* Adjust gap for balanced spacing */
-}
-
-.member-right .id-card {
-    width: 280px;
-    /* Slightly increased for better content fit */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.member-right .id-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.member-right .card-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.member-right .card-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    background-color: #f0f4f8;
-    /* Subtle background for icons */
-    padding: 10px;
-}
-
-.card-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin-top: 10px;
-}
-
-.member-right .card-description {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #666;
-}
 
 
 /* Blockchain Future Section  */
 
-    .blockchain-futuer-container{
-        padding: 120px 90px;
-        justify-content: center;
-        background-color: #fff;
-    }
+.blockchain-futuer-container{
+    padding: 120px 90px;
+    justify-content: center;
+    background-color: #fff;
+}
 
 
-    .blockchain-futuer-container .header-text{
-        justify-content: center;
-        text-align: center;
-    }
-    .blockchain-futuer-container .header-text h1{
-            font-size: 40px;
-            font-weight: 700;
-    }
-    .blockchain-futuer-container .header-text p{
-            font-size: 15px;
-            font-weight: 400;
-    }
-    .blockchain-futuer-details{
-        display: flex;
-        justify-content: center; 
-        padding: 120px 90px;
-    }
-    .blockchain-futuer-details .card-details{
-        margin: 40px 20px 0 20px;
-    }
-    .blockchain-futuer-details .card-image{
-        border-radius: 15px;
-        height: 200px;
-        width: 300px;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        position: relative;
-    }
-    .card-image{
-        border-radius: 15px;
-        height: 300px;
-        width: 600px;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        position: relative;
-        margin-top: -25px;
-    }
-    .blockchain-futuer-details .card-details .image-text{
-        background-color: #c4c3c3b0;
-        height: 190px;
-        width: 260px;
-        margin-left: 20px;
-        margin-top: -80px;
-        padding: 20px;
-        z-index: 2;
-        position: absolute;
-        border-radius: 10px;
-        text-align: center;
-        color: #000000;
-    }
-    .image-text h1{
-        margin-top: 10px;
-        padding: 10px;
+.blockchain-futuer-container .header-text{
+    justify-content: center;
+    text-align: center;
+}
+.blockchain-futuer-container .header-text h1{
+        font-size: 40px;
+        font-weight: 700;
+}
+.blockchain-futuer-container .header-text p{
+        font-size: 15px;
+        font-weight: 400;
+}
+.blockchain-futuer-details{
+    display: flex;
+    justify-content: center; 
+    padding: 120px 90px;
+}
+.blockchain-futuer-details .card-details{
+    margin: 40px 20px 0 20px;
+}
+.blockchain-futuer-details .card-image{
+    border-radius: 15px;
+    height: 200px;
+    width: 300px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: relative;
+}
+.card-image{
+    border-radius: 15px;
+    height: 300px;
+    width: 600px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: relative;
+    margin-top: -25px;
+}
+.blockchain-futuer-details .card-details .image-text{
+    background-color: #c4c3c3b0;
+    height: 190px;
+    width: 260px;
+    margin-left: 20px;
+    margin-top: -80px;
+    padding: 20px;
+    z-index: 2;
+    position: absolute;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+}
+.image-text h1{
+    margin-top: 10px;
+    padding: 10px;
 
-    }
-    .image-text p{
-        margin-top: 10px;
-        padding: 10px;
-    
+}
+.image-text p{
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+.blockchain-futuer-details .card-details .image-text:hover {
+    color: #f5f5f5;
+    background-color: #0471f6; 
+}
+
+.blockchain-futuer-details .card-details .read-more{
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #4CAF4F;
+
+
+
+}
+.blockchain-futuer-details .card-details .read-more:hover{
+    color: #b71a1a;
+}
+@media (max-width: 768px) {
+    .blockchain-futuer-container .header-text h1 {
+        font-size: 28px;
     }
 
-    .blockchain-futuer-details .card-details .image-text:hover {
-        color: #f5f5f5;
-        background-color: #0471f6; 
+    .blockchain-futuer-container .header-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blockchain-futuer-details {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .blockchain-futuer-details .card-details .read-more{
-        padding: 20px;
-        font-size: 20px;
-        text-decoration: none;
-        color: #4CAF4F;
-
-    
-
-    }
-    .blockchain-futuer-details .card-details .read-more:hover{
-        color: #b71a1a;
+    .card-details {
+        max-width: 100%;
     }
 
+    .blockchain-futuer-container .header-text h1 {
+        font-size: 24px;
+    }
+
+    .blockchain-futuer-container .header-text p {
+        font-size: 12px;
+    }
+}
 
 /* Contact Us Section */
 .contact-section {
@@ -475,7 +734,7 @@ body {
 .contact-right h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #333;
+    color:  #4D4D4D;
 }
 
 .contact-right form {
@@ -519,11 +778,40 @@ body {
     background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+    .contact-section {
+        justify-content: center;
+        flex-direction: column;
+        padding: 60px 20px;
+    }
 
+    .contact-left, .contact-right {
+        max-width: 100%;
+    }
+
+    .contact-right {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-left img {
+        max-width: 90%;
+    }
+
+    .contact-right h2 {
+        font-size: 24px;
+    }
+
+    .contact-right form button {
+        font-size: 16px;
+    }
+}
 
 /* Footer Section */
 .footer {
-    background-color: #333;
+    background-color:  #4D4D4D;
     color: white;
     padding: 120px 200px;
     display: flex;
@@ -653,101 +941,32 @@ body {
     background-color: #0077cc;
 }
 
-
-
-/* Mobile Responsive */
-
-/* navbar section  responsive*/
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #f4f4f4;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 10px 20px;
-        border-radius: 5px;
+    .footer {
+        padding: 40px 20px;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-/* Banner Section  responsive */
-@media (max-width: 768px) {
-    .banner {
-        flex-direction: column;
+    .footer-logo, .footer-company, .footer-support, .footer-msg {
         text-align: center;
-        padding: 20px;
+        flex: 1 100%;
+        margin: 20px 0;
     }
 
-    .banner-left, .banner-right {
-        flex: unset;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .banner-left h1 {
-        font-size: 36px;
-    }
-
-    .banner-left p {
-        font-size: 16px;
-    }
-
-    .banner-right img {
-        max-width: 90%;
-    }
-}
-
-/* Our Clients Section responsive */
-@media (max-width: 768px) {
-    .clients-title h1 {
-        font-size: 28px;
-    }
-
-    .clients-title p {
-        font-size: 14px;
-    }
-
-    .client-logo {
-        width: 100px;
-        height: 100px;
+    .footer-social {
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    .clients-title h1 {
+    .footer .footer-logo h2 {
         font-size: 24px;
     }
 
-    .clients-title p {
+    .footer .footer-logo p {
         font-size: 12px;
     }
 
-    .client-logo {
-        width: 80px;
-        height: 80px;
+    .footer-msg input[type="email"], .footer-msg button {
+        width: 100%;
     }
 }
-
-
-
-@media (max-width: 768px) {
-    .footer-support {
-        text-align: center;
-        flex-direction: column;
-    }
-
-    .footer-support div {
-        margin: 10px 0;
-    }
-}
-
