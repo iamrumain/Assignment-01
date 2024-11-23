@@ -595,9 +595,10 @@ body {
 /* Blockchain Future Section  */
 
 .blockchain-futuer-container{
-    padding: 120px 90px;
     justify-content: center;
     background-color: #fff;
+    padding: 120px 90px;
+    margin: 0 auto;
 }
 
 
@@ -614,9 +615,10 @@ body {
         font-weight: 400;
 }
 .blockchain-futuer-details{
+    margin-bottom: 30px;
     display: flex;
     justify-content: center; 
-    padding: 120px 90px;
+
 }
 .blockchain-futuer-details .card-details{
     margin: 40px 20px 0 20px;
